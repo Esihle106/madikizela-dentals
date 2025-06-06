@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gentle dental care in Scottburgh by Dr. Madikizela. Book extractions, crowns, cleanings, and more." />
+  <meta name="keywords" content="Dental Scottburgh, Dr. Madikizela, dental care, teeth cleaning, extractions, crowns, root canal" />
+  <title>Dr. Madikizela Dental Surgery</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+
+  <!-- Alpine.js for responsive menu -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Hero Background -->
+  <div class="bg-cover bg-center min-h-screen" style="background-image: url('images/professional-dentist-tools-dental-office.jpg');">
+    <!-- Lighter gradient overlay -->
+    <div class="bg-gradient-to-b from-white/5 to-white/30 backdrop-blur-sm min-h-screen flex flex-col">
+      
+      <!-- Navbar -->
+      <header x-data="{ open: false }" class="bg-blue-900 text-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 class="text-xl font-bold">Dr. Madikizela Dental Surgery</h1>
+          <button @click="open = !open" class="sm:hidden" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <nav class="hidden sm:flex space-x-6">
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#services" class="hover:underline">Services</a>
+            <a href="#booking" class="hover:underline">Book</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+          </nav>
+        </div>
+        <div x-show="open" class="sm:hidden px-4 pb-4 space-y-2">
+          <a href="#about" class="block">About</a>
+          <a href="#services" class="block">Services</a>
+          <a href="#booking" class="block">Book</a>
+          <a href="#contact" class="block">Contact</a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="text-center py-20 px-4 flex-grow flex flex-col justify-center">
+        <h2 class="text-4xl font-bold text-blue-900 mb-4">Caring for Your Smile</h2>
+        <p class="text-lg mb-6">Gentle, professional dental care in Scottburgh</p>
+        <a href="#booking" class="bg-blue-900 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition">Book an Appointment</a>
+      </section>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+
+    <!-- About -->
+    <section id="about">
+      <h3 class="text-2xl font-semibold text-blue-900 mb-4">About Us</h3>
+      <p>Located at 145 Surfers Paradise Building, Scott Street, Scottburgh 4180, Dr. Madikizela Dental Surgery is dedicated to providing friendly, affordable dental care for all ages.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Our Services</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Dental Extractions (Kids & Adults)</li>
+        <li>Restorations on Decaying Teeth</li>
+        <li>Cleaning & Polishing</li>
+        <li>Permanent Dental Crowns</li>
+        <li>False Teeth</li>
+        <li>Root Canal Therapy</li>
+      </ul>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Book an Appointment</h3>
+      <form action="https://formspree.io/f/mldngbay" method="POST" class="space-y-4">
+  <input type="text" name="name" placeholder="Full Name" class="w-full border rounded p-3" required>
+  <input type="email" name="email" placeholder="Email Address" class="w-full border rounded p-3" required>
+  <input type="date" name="date" class="w-full border rounded p-3" required>
+  <textarea name="message" placeholder="Describe your concern..." class="w-full border rounded p-3" rows="4"></textarea>
+  <button type="submit" class="bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800 transition">Submit</button>
+</form>
+
+    </section>
+
+    <!-- Contact Info -->
+    <section id="contact">
+      <h3 class="text-2xl font-semibold text-blue-900 mb-4">Contact Us</h3>
+      <p><strong>Address:</strong> 145 Surfers Paradise Building, Scott Street, Scottburgh 4180</p>
+      <p><strong>Phone:</strong> 0769967617</p>
+      <p><strong>Email:</strong> info@madikizelaspeech@yahoo.com</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center py-4 text-sm">
+    &copy; 2025 Dr. Madikizela Dental Surgery. All rights reserved.
+  </footer>
+</body>
+</html>
